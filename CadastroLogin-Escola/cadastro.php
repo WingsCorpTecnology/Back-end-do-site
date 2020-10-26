@@ -29,8 +29,8 @@
     $password = md5($password);
 
     $sql =
-        "INSERT INTO tbDiretor (nome, cpf, rg, email, senha, telefone)
-        VALUES ('$name', '$cpf', '$rg', '$email', '$password', '$telephone')";
+        "INSERT INTO tbDiretor (nome, cpf, rg, email, senha, telefone, foto)
+        VALUES ('$name', '$cpf', '$rg', '$email', '$password', '$telephone', LAST_INSERT_ID())";
 
     $execute = $conn->query($sql);
     $conn->close();

@@ -2,9 +2,10 @@
             session_start();
 
             if (!isset($_SESSION['Diretor'])) {
+	 header("Location: index.php");
                 $_SESSION['loginErro'] = "Usuário ou senha Inválido";
-                header("Location: index.php");
-                exit;
+                
+                //exit;
             }
 
 ?>

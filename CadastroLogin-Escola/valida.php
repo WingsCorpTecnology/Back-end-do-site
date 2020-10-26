@@ -17,14 +17,14 @@
 		$resultado = mysqli_fetch_assoc($resultado_usuario);
 		
 		if(isset($resultado)){
-			$_SESSION['Diretor'] = "Diretor logado";
 			header("Location: areaInternaDiretor.php");
+			$_SESSION['Diretor'] = "Diretor logado";
 		}else{	
-			$_SESSION['loginErro'] = "Usuário ou senha Inválido";
 			header("Location: index.php");
+			$_SESSION['loginErro'] = "Usuário ou senha Inválido";
 		}
 	}else{
-		$_SESSION['loginErro'] = "Usuário ou senha inválido";
 		header("Location: index.php");
+		$_SESSION['loginErro'] = "Usuário ou senha inválido";
 	}
 ?>
